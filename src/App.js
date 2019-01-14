@@ -1,26 +1,21 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
+import styled from '@emotion/styled/macro';
+import { Component } from 'react';
+import { space, fontSize, color } from 'styled-system';
+
+const Box = styled.div`
+  ${space}
+  ${fontSize}
+  ${color}
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Box m="4" color="red-light" fontSize="5xl">
+        test
+      </Box>
     );
   }
 }
